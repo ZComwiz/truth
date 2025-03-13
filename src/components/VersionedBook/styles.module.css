@@ -1,0 +1,122 @@
+.bookCard {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  overflow: hidden;
+}
+
+/* Loading and error states */
+.loading, .error {
+  padding: 2rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Version overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.versionList {
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.versionListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.versionListHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.versions {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: calc(80vh - 80px);
+}
+
+.versionItem {
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.versionItem:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.versionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.versionNumber {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.versionDate {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+.changeList {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
+
+.changeList li {
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .versionList {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .versions {
+    max-height: calc(90vh - 80px);
+  }
+}
+  

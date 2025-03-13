@@ -1,0 +1,300 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+:root {
+  /* Base Catholic colors */
+  --catholic-gold: #D4AF37;
+  --catholic-purple: #582C83;
+  --catholic-red: #722F37;
+  --catholic-blue: #1B3C68;
+  --catholic-cream: #FFF8E7;
+  
+  /* Light mode specific */
+  --text-primary: var(--catholic-blue);
+  --text-secondary: var(--catholic-purple);
+  --background-primary: #FFFFFF;
+  --background-secondary: var(--catholic-cream);
+  --card-bg: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --border-color: rgba(212, 175, 55, 0.3);
+  --gradient-overlay: rgba(27, 60, 104, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --logo-filter: none;
+}
+
+[data-theme='dark'] {
+  /* Dark mode specific */
+  --text-primary: var(--catholic-cream);
+  --text-secondary: #B49ACA;
+  --background-primary: #1A1A2E;
+  --background-secondary: #1B3C68;
+  --card-bg: rgba(27, 60, 104, 0.2);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(212, 175, 55, 0.5);
+  --gradient-overlay: rgba(88, 44, 131, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --logo-filter: brightness(0) invert(1);
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadSection {
+  padding: 6rem 0;
+  background: linear-gradient(45deg, 
+    var(--gradient-overlay),
+    rgba(212, 175, 55, 0.05)
+  );
+}
+
+.container {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.sectionTitle::after {
+  content: '✟';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--catholic-gold);
+  font-size: 1.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.8rem;
+  font-family: var(--ifm-font-family-base);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.emailSection {
+  padding: 6rem 0;
+  background: linear-gradient(45deg, 
+    var(--gradient-overlay),
+    rgba(212, 175, 55, 0.05)
+  );
+}
+
+.emailContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emailForm {
+  display: flex;
+  gap: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  font-size: 1.4rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: var(--catholic-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.subscribeButton {
+  padding: 1.2rem 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--catholic-blue);
+  background: linear-gradient(
+    to bottom,
+    #ffd700,
+    #fff3a0,
+    #ffd700
+  );
+  background-size: 100% 200%;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  animation: verticalShimmer 3s infinite linear;
+}
+
+.donationSection {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, 
+    var(--gradient-overlay) 0%,
+    rgba(212, 175, 55, 0.08) 50%,
+    var(--gradient-overlay) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.donationSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent,
+    var(--catholic-gold),
+    transparent
+  );
+}
+
+.donationButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.donationButton {
+  min-width: 140px;
+  font-weight: 600;
+  font-family: "Cinzel", serif;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, 
+    var(--catholic-blue), 
+    var(--catholic-purple)
+  );
+  color: var(--catholic-cream);
+  border: 2px solid var(--catholic-gold);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donationButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.customDonationWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.customDonationPrefix {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  pointer-events: none;
+}
+
+.customDonation {
+  width: 180px;
+  padding: 1.2rem 1.2rem 1.2rem 2.8rem;
+  border-radius: 12px;
+  border: 2px solid var(--catholic-gold);
+  font-size: 1.4rem;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes verticalShimmer {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 200%; }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] {
+  .sectionTitle {
+    color: var(--catholic-cream);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .subscribeButton {
+    color: var(--catholic-blue);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 
+      0 2px 5px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.5rem;
+  }
+  
+  .emailForm {
+    flex-direction: column;
+  }
+  
+  .emailInput {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .donationButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

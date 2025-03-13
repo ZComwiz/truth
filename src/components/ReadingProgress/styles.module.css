@@ -1,0 +1,106 @@
+.progressContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.bookInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: fit-content;
+}
+
+.bookInfoContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  z-index: 101;
+}
+
+.coverImage {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.imageWrapper:hover .coverImage {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ifm-color-content);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+}
+
+.notesButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--ifm-color-content);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.notesButton:hover {
+  opacity: 1;
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    max-width: 120px;
+  }
+  
+  .progressContainer {
+    padding: 10px 16px;
+  }
+}
+  

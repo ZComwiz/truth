@@ -1,0 +1,433 @@
+/**
+ * Catholic theme colors for Docusaurus
+ */
+
+/* Base Catholic colors */
+:root {
+  /* Primary colors based on Catholic blue */
+  --ifm-color-primary: #1B3C68;
+  --ifm-color-primary-dark: #18355D;
+  --ifm-color-primary-darker: #162F52;
+  --ifm-color-primary-darkest: #122847;
+  --ifm-color-primary-light: #1E4373;
+  --ifm-color-primary-lighter: #204A7E;
+  --ifm-color-primary-lightest: #235189;
+
+  /* Secondary colors */
+  --ifm-color-secondary: #582C83;
+  --ifm-color-success: #2E8555;
+  --ifm-color-info: #1B3C68;
+  --ifm-color-warning: #D4AF37;
+  --ifm-color-danger: #722F37;
+
+  /* Background and text */
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FFF8E7;
+  --ifm-font-color-base: #1B3C68;
+  --ifm-heading-color: #1B3C68;
+  --ifm-navbar-background-color: #FFFFFF;
+  --ifm-footer-background-color: #1B3C68;
+  
+  /* Code highlighting */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(27, 60, 104, 0.1);
+
+  /* Links */
+  --ifm-link-color: #582C83;
+  --ifm-link-hover-color: #722F37;
+
+  /* Borders */
+  --ifm-border-color: rgba(212, 175, 55, 0.3);
+
+  /* Typography */
+  --ifm-font-family-base: 'Cormorant Garamond', Georgia, serif;
+  --ifm-heading-font-family: 'Cinzel', Georgia, serif;
+  --ifm-font-size-base: 22px;
+  --ifm-line-height-base: 1.8;
+  --ifm-font-weight-base: 500;
+  --ifm-font-weight-semibold: 700;
+  --ifm-heading-font-weight: 800;
+  
+  /* Adjust heading sizes */
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.75rem;
+  --ifm-h4-font-size: 1.5rem;
+  --ifm-h5-font-size: 1.25rem;
+  --ifm-h6-font-size: 1.1rem;
+
+  /* Larger button text */
+  --ifm-button-font-size: 1.25rem;
+  --ifm-button-padding-vertical: 1rem;
+  --ifm-button-padding-horizontal: 2rem;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+  /* Primary colors based on Catholic purple */
+  --ifm-color-primary: #B49ACA;
+  --ifm-color-primary-dark: #A385BE;
+  --ifm-color-primary-darker: #9270B2;
+  --ifm-color-primary-darkest: #815BA6;
+  --ifm-color-primary-light: #C5AFD6;
+  --ifm-color-primary-lighter: #D6C4E2;
+  --ifm-color-primary-lightest: #E7D9EE;
+
+  /* Secondary colors */
+  --ifm-color-secondary: #582C83;
+  --ifm-color-success: #25c2a0;
+  --ifm-color-info: #B49ACA;
+  --ifm-color-warning: #D4AF37;
+  --ifm-color-danger: #722F37;
+
+  /* Background and text */
+  --ifm-background-color: #1A1A2E;
+  --ifm-background-surface-color: #1B3C68;
+  --ifm-font-color-base: #f7fafc;
+  --ifm-heading-color: #ffffff;
+  --ifm-navbar-background-color: #1A1A2E;
+  --ifm-footer-background-color: #122847;
+  
+  /* Code highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(88, 44, 131, 0.3);
+
+  /* Links */
+  --ifm-link-color: #B49ACA;
+  --ifm-link-hover-color: #D4AF37;
+
+  /* Borders */
+  --ifm-border-color: rgba(212, 175, 55, 0.5);
+
+  /* Typography */
+  --ifm-font-family-base: 'Cormorant Garamond', Georgia, serif;
+  --ifm-heading-font-family: 'Cinzel', Georgia, serif;
+  --ifm-font-size-base: 22px;
+  --ifm-line-height-base: 1.8;
+  --ifm-font-weight-base: 500;
+  --ifm-font-weight-semibold: 700;
+  --ifm-heading-font-weight: 800;
+  
+  /* Adjust heading sizes */
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.75rem;
+  --ifm-h4-font-size: 1.5rem;
+  --ifm-h5-font-size: 1.25rem;
+  --ifm-h6-font-size: 1.1rem;
+
+  /* Larger button text */
+  --ifm-button-font-size: 1.25rem;
+  --ifm-button-padding-vertical: 1rem;
+  --ifm-button-padding-horizontal: 2rem;
+
+  /* Improved contrast for titles */
+  --catholic-blue: #90CDF4;    /* Lighter, higher contrast blue */
+  --text-primary: #F7FAFC;     /* Very light gray for main text */
+  --text-secondary: #B49ACA;   /* Light purple for secondary text */
+  
+  /* Override heading colors for better contrast */
+  --ifm-heading-color: var(--catholic-blue);
+  --ifm-font-color-base: var(--text-primary);
+}
+
+/* Additional custom styles */
+.navbar {
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+.footer {
+  --ifm-footer-background-color: var(--ifm-color-primary-darkest);
+  --ifm-footer-color: var(--ifm-color-primary-lightest);
+  --ifm-footer-link-color: var(--ifm-color-primary-lighter);
+  --ifm-footer-title-color: var(--ifm-color-primary-lightest);
+}
+
+.footer__copyright {
+  color: var(--ifm-color-primary-lightest);
+}
+
+/* Card styling */
+.card {
+  border: 1px solid var(--ifm-border-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-warning);
+  transform: translateY(-2px);
+}
+
+/* Button styling */
+.button--primary {
+  background: var(--catholic-blue);
+  color: var(--catholic-cream);
+  border: 2px solid var(--catholic-gold);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button--primary:hover {
+  background: var(--catholic-purple);
+  color: var(--catholic-cream);
+  border-color: var(--catholic-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Admonitions styling */
+.alert {
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+/* Table styling */
+table {
+  border: 1px solid var(--ifm-border-color);
+}
+
+th {
+  background-color: var(--ifm-background-surface-color);
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.footer__title {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: 0.05em;
+}
+
+.button {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e5b8c;
+  --ifm-color-primary-dark: #29527e;
+  --ifm-color-primary-darker: #274d77;
+  --ifm-color-primary-darkest: #204062;
+  --ifm-color-primary-light: #33649b;
+  --ifm-color-primary-lighter: #3569a2;
+  --ifm-color-primary-lightest: #3c76b7;
+  
+  /* Typography improvements */
+  --ifm-font-size-base: 18px;           /* Increased base font size */
+  --ifm-line-height-base: 1.8;          /* More generous line height */
+  --ifm-font-weight-base: 450;          /* Slightly bolder than normal */
+  --ifm-font-weight-semibold: 600;
+  --ifm-heading-font-weight: 700;
+  
+  /* Improved spacing */
+  --ifm-paragraph-margin-bottom: 1.5rem;
+  --ifm-leading: 2rem;
+  
+  /* Better contrast colors */
+  --ifm-color-emphasis-600: #4a5568;
+  --ifm-link-color: #2b6cb0;
+  --ifm-link-hover-color: #2c5282;
+  
+  /* Content width for better readability */
+  --ifm-container-width: 960px;
+  --content-max-width: 70ch;
+}
+
+/* For readability - limit line length */
+.markdown {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* Improve paragraph readability */
+.markdown p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: var(--text-primary);
+}
+
+/* Make headings more prominent */
+.markdown h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  color: var(--catholic-blue);
+}
+
+.markdown h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--catholic-blue);
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Improve list readability */
+.markdown ul, 
+.markdown ol {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown li {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Better blockquote styling */
+.markdown blockquote {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8;
+  border-left-width: 4px;
+  border-left-color: var(--catholic-gold);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  background-color: var(--ifm-background-surface-color);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --ifm-font-color-base: #000000;
+    --ifm-background-color: #ffffff;
+    --ifm-color-primary: #000000;
+    --ifm-link-color: #000000;
+    --ifm-link-decoration: underline;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode improvements */
+[data-theme='dark'] {
+  --ifm-color-primary: #90cdf4;
+  --ifm-color-primary-dark: #63b9f0;
+  --ifm-color-primary-darker: #4cafee;
+  --ifm-color-primary-darkest: #1896ea;
+  --ifm-color-primary-light: #bde1f8;
+  --ifm-color-primary-lighter: #d4ebfa;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-background-color: #1a202c;
+  --ifm-background-surface-color: #2d3748;
+  
+  /* Improved dark mode contrast */
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-heading-color: #f7fafc;
+}
+
+/* Print styles for better readability */
+@media print {
+  :root {
+    --ifm-font-size-base: 12pt;
+    --ifm-line-height-base: 1.5;
+  }
+  
+  .markdown {
+    max-width: none;
+  }
+}
+
+/* Add this to your existing custom.css */
+#support-us-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+  font: inherit;
+  color: var(--ifm-navbar-link-color);
+}
+
+#support-us-button:hover {
+  color: var(--ifm-navbar-link-hover-color);
+}
+
+.highlighted-quote {
+  background-color: var(--ifm-color-primary-lightest);
+  transition: background-color 0.3s ease;
+  scroll-margin-top: 100px;
+  position: relative;
+}
+
+.highlighted-quote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ifm-color-primary-lighter) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.highlighted-quote.loaded::after {
+  display: none;
+}
+
+.highlightedSelection {
+  background-color: var(--ifm-color-primary-lightest);
+  scroll-margin-top: 100px;
+  position: relative;
+}
+
+/* Add a subtle animation for better visibility */
+@keyframes highlightFade {
+  0% { background-color: var(--ifm-color-primary-lighter); }
+  100% { background-color: var(--ifm-color-primary-lightest); }
+}
+
+.highlightedSelection {
+  animation: highlightFade 1s ease;
+}

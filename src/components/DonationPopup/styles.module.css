@@ -1,0 +1,203 @@
+.wrapper {
+  position: fixed;
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-primary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 20px var(--shadow-color);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1001;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Copy other donation styles from index.module.css */
+.donationButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.donationButton {
+  font-size: 1.4rem;
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+  background: var(--background-primary);
+  color: var(--catholic-blue);
+  border: 2px solid var(--catholic-gold);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.donationButton:hover {
+  background: var(--catholic-blue);
+  color: var(--catholic-cream);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+[data-theme='dark'] .donationButton {
+  color: var(--catholic-cream);
+  border-color: var(--catholic-gold);
+}
+
+[data-theme='dark'] .donationButton:hover {
+  background: var(--catholic-purple);
+}
+
+.customDonationWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.customDonationPrefix {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  pointer-events: none;
+}
+
+.customDonation {
+  font-size: 1.4rem;
+  padding: 1.2rem 1.2rem 1.2rem 2.8rem;
+  min-width: 200px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border: 2px solid var(--catholic-gold);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.customDonation:focus {
+  outline: none;
+  border-color: var(--catholic-blue);
+  box-shadow: 0 0 0 2px rgba(27, 60, 104, 0.2);
+}
+
+[data-theme='dark'] .customDonation:focus {
+  border-color: var(--catholic-purple);
+  box-shadow: 0 0 0 2px rgba(88, 44, 131, 0.2);
+}
+
+.contributeButton {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+  background: var(--catholic-blue);
+  color: var(--catholic-cream);
+  border: 2px solid var(--catholic-gold);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contributeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  background: var(--catholic-blue);
+  opacity: 0.9;
+}
+
+[data-theme='dark'] .contributeButton {
+  background: var(--catholic-purple);
+}
+
+[data-theme='dark'] .contributeButton:hover {
+  background: var(--catholic-purple);
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .donationButtons {
+    gap: 1rem;
+  }
+
+  .donationButton {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    min-width: 100px;
+  }
+
+  .customDonation {
+    min-width: 160px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+} 

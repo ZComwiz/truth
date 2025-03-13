@@ -1,0 +1,241 @@
+.diffViewer {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+}
+
+.controls {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--background-surface);
+}
+
+.versionSelectors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.versionSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.versionSelector label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.versionSelector select {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.arrow {
+  color: var(--catholic-gold);
+  font-weight: bold;
+}
+
+.diffContent {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.versionInfo {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.version h4 {
+  color: var(--catholic-gold);
+  margin: 0;
+}
+
+.date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.changes {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.changes li {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.contentWrapper {
+  background: var(--background-surface);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.contentWrapper h5 {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+}
+
+.content {
+  margin: 0;
+  padding: 1rem;
+  background: var(--background-primary);
+  border-radius: 4px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+.noContent {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.diffLine {
+  padding: 0.25rem 0.5rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.linePrefix {
+  width: 1.5em;
+  flex-shrink: 0;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.lineContent {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.addition {
+  background: rgba(35, 134, 54, 0.15);
+}
+
+.addition .linePrefix {
+  color: var(--ifm-color-success);
+}
+
+.deletion {
+  background: rgba(248, 81, 73, 0.15);
+}
+
+.deletion .linePrefix {
+  color: var(--ifm-color-danger);
+}
+
+.unchanged {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.contentDiff {
+  background: var(--ifm-background-color);
+  padding: 1rem;
+}
+
+.noChanges {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+.expandButton,
+.collapseButton {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.expandButton:hover,
+.collapseButton:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.diffSection {
+  margin: 0.5rem 0;
+}
+
+.diffDropdown {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 600px;
+  max-height: 80vh;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  overflow: auto;
+  z-index: 1000;
+  
+  @media (max-width: 768px) {
+    width: 95vw;
+    max-height: 85vh;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.versionControl {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+/* Add styles for better mobile spacing */
+@media (max-width: 768px) {
+  .versionSelectors {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .versionSelector {
+    margin-bottom: 0.5rem;
+  }
+  
+  .versionSelector select {
+    width: 100%;
+  }
+  
+  .contentDiff {
+    font-size: 14px;
+  }
+}
+ 

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+}
+
+.coverImage {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metadata {
+  flex: 1;
+}
+
+.author {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}

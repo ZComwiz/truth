@@ -1,0 +1,26 @@
+.preview {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.previewContent {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.fadeOut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ifm-background-color)
+  );
+} 

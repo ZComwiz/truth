@@ -1,0 +1,79 @@
+.bookCard {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.bookCover {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.coverImage {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.version {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--catholic-gold);
+  color: var(--background-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-family: var(--ifm-heading-font-family);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bookInfo {
+  flex: 1;
+}
+
+.metadata {
+  margin: 1rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.changelogDialog {
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.changelogDialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.changelogContent {
+  padding: 2rem;
+  background: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.changelogEntry {
+  margin-bottom: 1.5rem;
+}
+
+.changelogEntry h5 {
+  color: var(--catholic-gold);
+  margin-bottom: 0.5rem;
+} 
